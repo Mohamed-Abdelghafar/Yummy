@@ -25,15 +25,14 @@ aside {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 250px;
+    width: 200px;
     background-color: rgba(0, 0, 0, 0.493);
     z-index: 999;
 }
-@media screen and(max-width:700px) {
-    aside{
-        width: 150px;
-    }
+ul {
+    list-style: none;
 }
+
 .asideNav {
     width: 60px;
     background-color: rgba(172, 136, 74, 0.796);

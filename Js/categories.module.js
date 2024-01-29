@@ -21,7 +21,7 @@ export class Categories {
             <div class="col-sm-6 col-md-4 col-lg-3 mealcategory" id=${mealType}>
                     <div class="food-img-container rounded-3 overflow-hidden ">
                         <img src=${mealImage} alt="" class="w-100">
-                        <div class="foodImgLayer p-2 d-flex flex-column justify-content-center align-items-center">
+                        <div class="foodImgLayer p-2 d-flex flex-column justify-content-between align-items-center">
                             <h3 class="mt-3">${mealType}</h3>
                             <p>${CategoryDescription.split(' ').splice(0,20).join(' ')}</p>
                         </div>

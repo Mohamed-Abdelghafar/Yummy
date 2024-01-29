@@ -4,32 +4,33 @@ import { DisplayDefault } from "./display.module.js";
 import { Ingredients } from "./ingredient.module.js";
 import { Search } from "./search.module.js";
 
-const navContentWidth = $('.navContent').innerWidth();
-$('aside').css('left', -navContentWidth)
+let navContentWidth = $('.navContent').innerWidth();
+$('aside').css('left', -navContentWidth);
 
 $('.xMark').click(function () {
+    navContentWidth = $('.navContent').innerWidth();
     //console.log($('.navContent').innerWidth());
     if ($('aside').css('left') == '0px') {
         //$('aside').css('left' , -navContentWidth) ----> first way
         //console.log($('aside').css('left' ));
         $('aside').animate({ left: -navContentWidth }, 500) //----> another way
         $('.xMark').html('<i class="fa-solid fa-bars fa-2x"></i>')
-        $('.contactLink').animate({top:'100%'},(900))
-        $('.ingredientLink').animate({top:'100%'},(800))
-        $('.areaLink').animate({top:'100%'},(700))
-        $('.CategoriesLink').animate({top:'100%'},(600))
-        $('.searchLink').animate({top:'100%'},(500))
+        $('.contactLink').animate({ top: '100%' }, (900))
+        $('.ingredientLink').animate({ top: '100%' }, (800))
+        $('.areaLink').animate({ top: '100%' }, (700))
+        $('.CategoriesLink').animate({ top: '100%' }, (600))
+        $('.searchLink').animate({ top: '100%' }, (500))
     }
     else {
         //$('aside').css('left' , 0)
         //console.log($('aside').css('left' ));
         $('aside').animate({ left: 0 }, 500)
         $('.xMark').html('<i class="fa-solid fa-xmark fa-3x"></i>')
-        $('.searchLink').animate({top : 0},(500))
-        $('.CategoriesLink').animate({top:0},(600))
-        $('.areaLink').animate({top:0},(700))
-        $('.ingredientLink').animate({top:0},(800))
-        $('.contactLink').animate({top:0},(900))
+        $('.searchLink').animate({ top: 0 }, (500))
+        $('.CategoriesLink').animate({ top: 0 }, (600))
+        $('.areaLink').animate({ top: 0 }, (700))
+        $('.ingredientLink').animate({ top: 0 }, (800))
+        $('.contactLink').animate({ top: 0 }, (900))
     }
 })
 
@@ -69,7 +70,7 @@ const categoriesSection = document.querySelector('.categoriesSection')
 const CategoriesLink = document.querySelector('.CategoriesLink')
 
 CategoriesLink.addEventListener('click', function () {
-  
+
     $('section').addClass('d-none').not('.categoriesSection')
     $('.categoryType').addClass('d-none')
     $('.categoriesSection').removeClass('d-none')
@@ -118,7 +119,7 @@ contactLink.addEventListener('click', function () {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////Close-Buttons
-function closePage (add , remove){
+function closePage(add, remove) {
     add.classList.add('d-none')
     remove.classList.remove('d-none')
     document.querySelector('body').classList.remove('overflow-hidden')
@@ -138,7 +139,7 @@ const closeCategory = document.querySelector('.categoryType-header')
 
 
 closeCategory.addEventListener('click', function () {
-    closePage (categoryType , categoriesSection)
+    closePage(categoryType, categoriesSection)
 })
 // closeAreaFood
 const countryFood = document.querySelector('.countryFood')
@@ -146,7 +147,7 @@ const closeCountryFoodSec = document.querySelector('.closeCountryFoodSection')
 
 
 closeCountryFoodSec.addEventListener('click', function () {
-    closePage(countryFood , areaSection)
+    closePage(countryFood, areaSection)
 })
 
 
@@ -155,7 +156,7 @@ const closeingredientTypes = document.querySelector('.closeingredientTypes')
 
 
 closeingredientTypes.addEventListener('click', function () {
-    closePage(ingredientTypes , ingredientSection)
+    closePage(ingredientTypes, ingredientSection)
 })
 
 
@@ -168,67 +169,79 @@ $('#user-Phone').keyup(regexPhone)
 $('#user-Age').keyup(regexAge)
 $('#user-Pass').keyup(regexPass)
 $('#user-RePass').keyup(regexRePass)
-function regexName (){
+function regexName() {
     let RJX_Name = /^[A-z]{3,15}$/
-    if (RJX_Name.test($('#user-Name').val())==true) {
+    if (RJX_Name.test($('#user-Name').val()) == true) {
+        $('#user-Name').addClass('is-valid')
         $('.alertName').slideUp(100)
         return true
     }
     else {
         $('.alertName').slideDown(100)
+        $('#user-Name').removeClass('is-valid')
     }
 }
-function regexEmail (){
+function regexEmail() {
     let RJX_Email = /^[a-zA-Z][a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)$/
-    if (RJX_Email.test($('#user-Email').val())==true) {
+    if (RJX_Email.test($('#user-Email').val()) == true) {
+        $('#user-Email').addClass('is-valid')
         $('.alertEmail').slideUp(100)
         return true
     }
     else {
+        $('#user-Email').removeClass('is-valid')
         $('.alertEmail').slideDown(100)
     }
 }
 
-function regexPhone (){
+function regexPhone() {
     let RJX_Phone = /^(002|\+2)?01[0125]\d{8}$/
-    if (RJX_Phone.test($('#user-Phone').val())==true) {
+    if (RJX_Phone.test($('#user-Phone').val()) == true) {
+        $('#user-Phone').addClass('is-valid')
         $('.alertPhone').slideUp(100)
         return true
     }
     else {
+        $('#user-Phone').removeClass('is-valid')
         $('.alertPhone').slideDown(100)
     }
 }
-function regexAge (){
+function regexAge() {
     let RJX_Age = /^[1-9]{1}[0-9]{0,2}$/
-    if (RJX_Age.test($('#user-Age').val())==true) {
+    if (RJX_Age.test($('#user-Age').val()) == true) {
+        $('#user-Age').addClass('is-valid')
         $('.alertAge').slideUp(100)
         return true
     }
     else {
+        $('#user-Age').removeClass('is-valid')
         $('.alertAge').slideDown(100)
     }
 }
-function regexPass (){
+function regexPass() {
     let RJX_Pass = /^(?=.*[A-Za-z])(?=.*\d)[a-zA-Z0-9!@#$%^&*()~¥=_+}{":;'?/>.<,`\-\|\[\]]{8,50}$/
-    if (RJX_Pass.test($('#user-Pass').val())==true) {
+    if (RJX_Pass.test($('#user-Pass').val()) == true) {
+        $('#user-Pass').addClass('is-valid')
         $('.alertPass').slideUp(100)
         return true
     }
     else {
+        $('#user-Pass').removeClass('is-valid')
         $('.alertPass').slideDown(100)
     }
 }
-function regexRePass (){
+function regexRePass() {
     if ($('#user-Pass').val() == $('#user-RePass').val()) {
+        $('#user-RePass').addClass('is-valid')
         $('.alertRePass').slideUp(100)
         return true
     }
     else {
+        $('#user-RePass').removeClass('is-valid')
         $('.alertRePass').slideDown(100)
     }
 }
-$('input').keyup(function(){
+$('input').keyup(function () {
     if ((regexName() && regexEmail() && regexPhone() && regexAge() && regexPass() && regexRePass()) == true) {
         document.querySelector('.sub-button').classList.remove('disabled')
     }
@@ -239,6 +252,6 @@ $('input').keyup(function(){
 
 // loading-screen
 
-document.addEventListener('load' , function(){
+document.addEventListener('load', function () {
     $('.loadingScreen').removeClass('d-none')
- })
+})
