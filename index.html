@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/Style.css">
+    <link rel="stylesheet" href="CSS/mq.css">
+</head>
+
+<body>
+
+    <aside class="d-flex flex-column justify-content-between">
+        <div class="position-relative h-100">
+            <div class="asideNav position-absolute h-100 py-3 px-1">
+                <div class="icon"><img src="Images/logo.png" alt="" class="w-100"></div>
+                <div class="xMark"><i class="fa-solid fa-bars fa-2x"></i></i></div>
+                <div class="navFotter">
+                    <div class="navFotter-icon mb-1"><i class="fa-solid fa-globe"></i></div>
+                    <div class="navFotter-icon"><i class="fa-solid fa-share-nodes"></i></div>
+                </div>
+            </div>
+            <div class="navContent d-flex flex-column justify-content-between h-100">
+                <div class="asideTop d-flex flex-column justify-content-evenly">
+                    <ul class="links container mt-3 d-flex flex-column justify-content-evenly">
+                        <li class="link position-relative searchLink">Search</li>
+                        <li class="link position-relative CategoriesLink">Categories</li>
+                        <li class="link position-relative areaLink">Area</li>
+                        <li class="link position-relative ingredientLink">Ingredients</li>
+                        <li class="link position-relative contactLink">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="asideFooter p-3">
+                    <div class="text-black"><span class="me-1"><i class="fa-brands fa-facebook"></i></span><span
+                            class="me-1"><i class="fa-brands fa-twitter"></i></span><span class="me-1"><i
+                                class="fa-solid fa-globe"></i></span></div>
+                    <p class="text-black">Copyright Â© 2019 All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    <!-- loading screen -->
+    <div
+        class="loadingScreen position-fixed top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center d-none">
+        <div><i class="fa-solid fa-spin fa-spinner fa-5x text-white"></i></div>
+    </div>
+    <!-- Display default -->
+
+    <section class="displayDefault my-5">
+        <div class="container">
+            <div class="cardsMealsBox row g-4">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- meal-Details -->
+
+    <section class="mealDetailsSection position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="mealDetails-header d-flex justify-content-end"><i
+                    class="closeDetailsSection fa-solid fa-xmark fa-2x"></i></div>
+            <div class="row mealDetailsBox">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- search-section -->
+    <section class="searchSection position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div>
+                        <input type="search" placeholder="Search By Name"
+                            class="searchByName bg-transparent text-black w-100 p-2 rounded-3">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input type="search" placeholder="Search By First Letter"
+                            class="searchByLetter bg-transparent text-black w-100 p-2 rounded-3" maxlength="1">
+                    </div>
+                </div>
+            </div>
+            <div class="searchedValues row mt-5 g-4">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories-Section -->
+    <section class="categoriesSection position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="cardsCategoriesBox row g-4">
+            </div>
+        </div>
+    </section>
+    <div class="categoryType position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="categoryType-header d-flex justify-content-end text-white mb-2"><i
+                    class="closeDetailsSection fa-solid fa-xmark fa-2x"></i></div>
+            <div class="categoryTypeBox row g-4">
+            </div>
+        </div>
+    </div>
+
+    <!-- Area-Section -->
+    <section class="areaSection position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="areaSectionBox row g-4">
+            </div>
+        </div>
+    </section>
+    <section class="countryFood position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="countryFood-header d-flex justify-content-end text-white mb-2"><i
+                    class="closeCountryFoodSection fa-solid fa-xmark fa-2x"></i></div>
+            <div class="countryFoodBox row g-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredient-Section -->
+    <section class="ingredientSection position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="ingredientSectionBox row g-4">
+            </div>
+        </div>
+    </section>
+    <section class="ingredientTypes position-fixed top-0 bottom-0 start-0 end-0 py-5 d-none overflow-auto">
+        <div class="container">
+            <div class="ingredientTypes-header d-flex justify-content-end text-white mb-2"><i
+                    class="closeingredientTypes fa-solid fa-xmark fa-2x"></i></div>
+            <div class="ingredientTypesBox row g-4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact-Section -->
+    <section
+        class="contactSection position-fixed top-0 bottom-0 start-0 end-0 py-5 overflow-auto d-flex justify-content-center align-items-center d-none">
+        <div class="container w-50">
+            <form class="row g-4">
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="text" name="userName" id="user-Name"
+                            placeholder="Enter Your Name">
+                    </div>
+                    <div class="alertName alert alert-danger py-2 my-1 " role="alert">
+                        Special characters and numbers not allowed
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="email" name="userEmail" id="user-Email"
+                            placeholder="Enter Your Email">
+                    </div>
+                    <div class="alertEmail alert alert-danger py-2 my-1 " role="alert">
+                        Email not valid *exemple@yyy.zzz
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="tel" name="userPhone" id="user-Phone"
+                            placeholder="Enter Your Phone">
+                    </div>
+                    <div class="alertPhone alert alert-danger py-2 my-1 " role="alert">
+                        Enter valid Phone Number
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="number" name="userAge" id="user-Age"
+                            placeholder="Enter Your Age">
+                    </div>
+                    <div class="alertAge alert alert-danger py-2 my-1 " role="alert">
+                        Enter valid age
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="password" name="userPass" id="user-Pass"
+                            placeholder="Enter Your password">
+                    </div>
+                    <div class="alertPass alert alert-danger py-2 my-1 " role="alert">
+                        Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <input class="form-control border-0 " type="password" name="userRePass" id="user-RePass"
+                            placeholder="RePassword">
+                    </div>
+                    <div class="alertRePass alert alert-danger py-2 my-1 " role="alert">
+                        Enter valid repassword
+                    </div>
+                </div>
+                <button type="submit" class="sub-button btn mx-auto disabled px-3 py-2">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="Js/jquery-3.7.1.min.js"></script>
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/index.js" type="module"></script>
+</body>
+
+</html>

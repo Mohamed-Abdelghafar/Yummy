@@ -1,0 +1,166 @@
+
+*{
+    font-family: 'Kalam', cursive;
+}
+body , section , .categoryType{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.266) , rgba(0, 0, 0, 0.266)) , url(../Images/wheat-1845835_1920.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+::-webkit-scrollbar{
+    background-color: #8e6107;
+    width: 12px;
+    
+}
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff6d;
+    border-radius: 10px;
+    border: 1px solid #8e61079f;
+    box-shadow: 0 0 4px rgba(205, 162, 4, 0.692) ;
+}
+/* aside */
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 999;
+}
+@media screen and(max-width:700px) {
+    aside{
+        width: 150px;
+    }
+}
+.asideNav {
+    width: 60px;
+    background-color: rgba(172, 136, 74, 0.796);
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    color: black;
+}
+
+.xMark , .fa-bars , .navFotter-icon , .fa-xmark , .coutryBox , .link{
+    cursor: pointer;
+}
+.links {
+    color: white;
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+}
+.links .link {
+    position: absolute;
+    top: 100%;
+}
+
+.asideFooter{
+    background-color: rgba(255, 255, 255, 0.484);
+}
+/* display home */
+.food-img-container {
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #9e7d45;
+}
+.foodImgLayer {
+    position: absolute;
+    height: 100%;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.726);
+    transition: 0.5s;
+}
+.food-img-container:hover .foodImgLayer{
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+/* meal-Details */
+.mealDetailsSection {
+    background-color: black;
+    color: white;
+    z-index: 99999999999999999999;
+}
+.reciepes {
+    background-color: rgba(188, 134, 46, 0.725);
+    width: fit-content;
+}
+.Tags {
+    background-color: rgba(193, 97, 13, 0.743);
+    width: fit-content;
+}
+.source-button {
+    background-color: rgba(7, 139, 24, 0.47);
+    color: white;
+}
+.source-button:hover {
+    background-color: rgba(9, 124, 24, 0.711);
+}
+.Youtube-button {
+    background-color: rgba(255, 0, 0, 0.47);
+    color: white;
+}
+.Youtube-button:hover {
+    background-color: rgba(255, 0, 0, 0.589);
+}
+/* search-section */
+
+.searchSection {
+    background-color: black;
+}
+.searchSection ::placeholder {
+    color: white;
+}
+.searchByName , .searchByLetter {
+    border: 1px solid black;
+    outline: none;
+}
+.searchByName::placeholder , .searchByLetter::placeholder {
+    color: black;
+}
+/* Categories-section */
+
+.Categories , .categoryType , .areaSection , .countryFood ,.contactSection{
+    background-color: black;
+}
+/* ingredient */
+.ingredientName , .countryName ,.coutryBox{
+    transition: 0.5s;
+}
+.coutryBox:hover {
+    background-color: rgba(0, 0, 0, 0.613);
+}
+.coutryBox {
+    border: 1px solid white;
+}
+/* rejex */
+
+.alertName ,.alertEmail , .alertPhone ,.alertAge , .alertPass ,.alertRePass {
+    display: none;
+}
+.sub-button  {
+    width: fit-content;
+    background-color: #8e6107;
+}
+.sub-button:hover  {
+    background-color: #845b08;
+    color: white;
+}
+/* loading screen */
+.loadingScreen {
+    background-color: black;
+    z-index: 99999999999999999999999;
+}
