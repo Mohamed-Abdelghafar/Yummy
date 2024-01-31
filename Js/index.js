@@ -34,6 +34,16 @@ $('.xMark').click(function () {
     }
 })
 
+function closeNav(){
+    $('aside').animate({ left: -navContentWidth }, 500) //----> another way
+    $('.xMark').html('<i class="fa-solid fa-bars fa-2x"></i>')
+    $('.contactLink').animate({ top: '100%' }, (900))
+    $('.ingredientLink').animate({ top: '100%' }, (800))
+    $('.areaLink').animate({ top: '100%' }, (700))
+    $('.CategoriesLink').animate({ top: '100%' }, (600))
+    $('.searchLink').animate({ top: '100%' }, (500))
+}
+
 const displayDataDefault = new DisplayDefault('')
 displayDataDefault.function()
 
@@ -58,6 +68,7 @@ const mealDetailsSection = document.querySelector('.mealDetailsSection')
 const searchLink = document.querySelector('.searchLink')
 searchLink.addEventListener('click', function () {
 
+    closeNav()
     $('section').addClass('d-none').not('.searchSection')
     $('.categoryType').addClass('d-none')
     $('.searchSection').removeClass('d-none')
@@ -71,6 +82,7 @@ const CategoriesLink = document.querySelector('.CategoriesLink')
 
 CategoriesLink.addEventListener('click', function () {
 
+    closeNav()
     $('section').addClass('d-none').not('.categoriesSection')
     $('.categoryType').addClass('d-none')
     $('.categoriesSection').removeClass('d-none')
@@ -83,6 +95,7 @@ const areaSection = document.querySelector('.areaSection')
 
 areaLink.addEventListener('click', function () {
 
+    closeNav()
     $('section').addClass('d-none').not('.areaSection')
     $('.countryFood').addClass('d-none')
     $('.ingredientTypes').addClass('d-none')
@@ -98,6 +111,7 @@ const ingredientSection = document.querySelector('.ingredientSection')
 ingredientsLink.addEventListener('click', function () {
 
 
+    closeNav()
     $('section').addClass('d-none').not('.ingredientSection')
     $('.countryFood').addClass('d-none')
     $('.ingredientTypes').addClass('d-none')
@@ -112,6 +126,7 @@ const contactLink = document.querySelector('.contactLink')
 contactLink.addEventListener('click', function () {
 
 
+    closeNav()
     $('section').addClass('d-none').not('.contactSection')
     $('.contactSection').removeClass('d-none')
 })
